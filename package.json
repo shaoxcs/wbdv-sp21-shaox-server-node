@@ -1,0 +1,23 @@
+{
+  "name": "wbdv-sp21-shaox-server-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaoxcs/wbdv-sp21-shaox-server-node.git"
+  },
+  "author": "Shao Xue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaoxcs/wbdv-sp21-shaox-server-node/issues"
+  },
+  "homepage": "https://github.com/shaoxcs/wbdv-sp21-shaox-server-node#readme",
+  "dependencies": {
+    "experss": "*",
+    "express": "^4.17.1"
+  }
+}
