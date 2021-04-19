@@ -18,6 +18,7 @@
   "homepage": "https://github.com/shaoxcs/wbdv-sp21-shaox-server-node#readme",
   "dependencies": {
     "experss": "*",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.12.4"
   }
 }
