@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/shaoxcs/wbdv-sp21-shaox-server-node#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "experss": "*",
     "express": "^4.17.1",
-    "mongoose": "^5.12.4"
+    "mongoose": "^5.12.4",
+    "morgan": "^1.10.0"
   }
 }
