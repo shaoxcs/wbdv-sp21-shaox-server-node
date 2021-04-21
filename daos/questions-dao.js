@@ -4,9 +4,7 @@ const quizzesModel = require("../models/quizzes/quizzes-model");
 const findAllQuestions = () => questionsModel.find();
 const findQuestionById = (qid) => questionsModel.findById(qid);
 const findQuestionsForQuiz = (qzid) => {
-  return quizzesModel.findById(qzid)
-  .populate("questions")
-  .then(quiz => quiz.questions)
+  return questionsModel.find({quizId: qzid})
 };
 
 module.exports = { findAllQuestions, findQuestionById, findQuestionsForQuiz }
