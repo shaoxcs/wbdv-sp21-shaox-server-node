@@ -6,9 +6,9 @@ const morgan = require('morgan');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(morgan);
+app.use(morgan('common'));
 
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers',
       'Content-Type, X-Requested-With, Origin');
@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
   next();
 })
 
-mongoose.connect("mongodb://localhost:27017/whiteboard",
+mongoose.connect("mongodb+srv://webdev-user:123@cluster0.hteq5.mongodb.net/whiteboard?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true
@@ -35,7 +35,7 @@ require('./controllers/questions-controller')(app)
 require('./controllers/question-attempts-controller')(app)
 
 app.get("/", (req, res) => {
-  res.send("Welcome, please use /api/xxx to access data")
+  res.send("Please use /api/xxx to access data")
 })
 
 app.listen(process.env.PORT || 4000)
